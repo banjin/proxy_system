@@ -1,0 +1,7 @@
+{
+    "python.pythonPath": "/Users/songhaiming/.local/share/virtualenvs/proxy_system-7etrO1zs/bin/python",
+    "python.linting.flake8Enabled": false,
+    "python.linting.pylintEnabled": true,
+    "python.linting.pep8Enabled": false,
+    "python.linting.enabled": true
+}
