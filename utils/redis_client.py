@@ -5,7 +5,7 @@ import redis
 
 REDIS_HOST = '127.0.0.1'
 REDIS_PORT = 6379
-REDS_PASSWORD = 'qssec.com'
+REDS_PASSWORD = 'test'
 # redis的Sorted Set结构的key
 REDIS_KEY = 'proxies'
 # 初始化优先级的值为10
@@ -23,8 +23,8 @@ MAX_SCORE = 100
 class RedisClient:
 
     def __init__(self, host=REDIS_HOST, port=REDIS_PORT):
+        self.redisdb = redis.StrictRedis(host=host, port=port,password=REDS_PASSWORD)
         print('redis连接成功......')
-        self.redisdb = redis.StrictRedis(host=host, port=port)
 
     def add(self, proxy, score=INITAL_SCORE):
         """

@@ -17,12 +17,8 @@ class Tester:
     def __init__(self):
         self.redisdb = redis_client.RedisClient()
 
-    """
-        通过async关键字创建一个协程函数
-    """
     async def test_proxy(self, proxy):
-        """
-            检测代理的可用性
+        """检测代理的可用性
         """
         conn = aiohttp.TCPConnector(verify_ssl=False)
         async with aiohttp.ClientSession(connector=conn) as session:
@@ -62,4 +58,9 @@ class Tester:
                 loop.run_until_complete(asyncio.wait(tasks))
                 time.sleep(5)
         except Exception as e:
+            print(e)
             print('检测模块出错！！！')
+
+if __name__ == "__main__":
+    t = Tester()
+    t.run()
