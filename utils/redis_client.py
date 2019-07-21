@@ -5,7 +5,7 @@ import redis
 
 REDIS_HOST = '127.0.0.1'
 REDIS_PORT = 6379
-REDS_PASSWORD = 'test'
+REDS_PASSWORD = 'qssec.com'
 # redis的Sorted Set结构的key
 REDIS_KEY = 'proxies'
 # 初始化优先级的值为10

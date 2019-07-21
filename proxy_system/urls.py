@@ -15,6 +15,11 @@ Including another URLconf
 from django.conf.urls import include, url
 from django.contrib import admin
 
-urlpatterns = [
+api_urlpatterns = [
     url(r'^admin/', include(admin.site.urls)),
+    url(r'^proxy/', include('proxy.urls')),
+]
+
+urlpatterns =  [
+    url(r'^api/', include(api_urlpatterns)),
 ]
